@@ -1,0 +1,24 @@
+{%extends 'father.html'%}
+{%block body%}
+<h1 style="text-align: center;border: 2px;">Notice</h1>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Uploaded By</th>
+        <th>title</th>
+        <th>Notice</th>
+        <th>Date</th>
+
+
+    </tr>
+    {%for n in note%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{n.newsby}}</td>
+        <td>{{n.newstitle}}</td>
+        <td>{{n.newstext}}</td>
+        <td>{{n.newsdate}}</td>
+        {%endfor%}
+    </tr>
+</table>
+{%endblock%}

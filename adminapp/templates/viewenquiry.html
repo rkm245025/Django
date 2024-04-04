@@ -1,0 +1,26 @@
+{%extends 'adminparent.html'%}
+{%block main%}
+    <h1 style="text-align: center;">Enquiries</h1>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Emali</th>
+            <th>Enquiry text</th>
+            <th>Enquiry Date</th>
+        </tr>
+        {% for e in enq%}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.enquirytext}}</td>
+            <td>{{e.enquirydate}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}

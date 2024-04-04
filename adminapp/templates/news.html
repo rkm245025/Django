@@ -1,0 +1,55 @@
+{%extends 'adminparent.html'%}
+
+{%block main%}
+<script>
+    function ravi(){
+        var newstitle=document.getElementById("newstitle");
+        var newstext=document.getElementById('newstext');
+        var newsby=document.getElementById('newsby');
+        /*alert(newstitle);
+        alert(newsby);
+        alert(newstext);*/
+
+        if(newstitle.value=="" || newstitle.value==null)
+        {
+            alert("Enter title plese");
+            newstitle.focus();
+        }
+        else if(newstext.value=="" || newstext.value==null)
+        {   alert("Enter notice plese");
+            newstext.focus();
+        }
+        else if(newsby.value=="" || newsby.value==null)
+        {
+            alert("enter your name plese");
+            newsby.focus();
+        }
+        else{
+            document.getElementById("upns").submit();
+        }
+    }
+</script>
+<h1 style="text-align: center;">Upload Noties for Students</h1>
+<form action="{% url 'news'%}" method="post" id="upns" onsubmit="event.preventDefault(); ravi();">
+    {%csrf_token%}
+    <table>
+        <tr>
+            <th>Notice Titile</th>
+            <th><input type="text" name="newstitle" id="newstitle"></th>
+        </tr>
+        <tr>
+            <th>Notice</th>
+            <th><textarea name="newstext" id="newstext" cols="20" rows="3"></textarea></th>
+        </tr>
+        <tr>
+            <td>Uploaded By</td>
+            <td><input type="text" name="newsby" id="newsby"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button style="background-color: green;" type="submit">Upload</button></td>
+        </tr>
+    </table>
+
+</form>
+{%endblock%}

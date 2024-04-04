@@ -1,0 +1,28 @@
+{%extends 'father.html'%}
+{%block body%}
+<h1 style="text-align: center; color: goldenrod;">Your Learning Material</h1>
+<div>{{stu.branch}}</div>
+<div>{{stu.name}}</div>
+<div>{{study.subject}}</div>
+<div>{{stu.year}}</div>
+<div>{{study.subject}}</div>
+<div>{{study.filename}}</div>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Subject</th>
+
+        <th>File Name</th>
+        <th>Dowmload</th>
+
+    </tr>
+    {%for s in study%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{s.subject}}</td>
+        <td>{{s.filename}}</td>
+        <td><a href="{{s.myfile.url}}" download >{{s.myfile}}</a></td>
+        {%endfor%}
+    </tr>
+</table>
+{%endblock%}

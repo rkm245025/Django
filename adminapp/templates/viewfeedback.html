@@ -1,0 +1,31 @@
+{%extends 'adminparent.html'%}
+
+{%block main%}
+<h1 style="text-align: center;">View Stundent Feedback's</h1>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Year</th>
+        <th>email</th>
+        <th>Subject</th>
+        <th>Feedback</th>
+        <th>Posted Date</th>
+    </tr>
+    {%for f in feed%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{f.username}}</td>
+        <td>{{f.name}}</td>
+        <td>{{f.branch}}</td>
+        <td>{{f.year}}</td>
+        <td>{{f.email}}</td>
+        <td>{{f.subject}}</td>
+        <td>{{f.responcetext}}</td>
+        <td>{{f.responcedate}}</td>
+        {%endfor%}
+    </tr>
+</table>
+{%endblock%}

@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a href="{%url 'stundentlogout'%}">Logout</a>
+    <a href="{%url 'viewprofile'%}">viewprofile</a>
+    <a href="{%url 'studenthome'%}">Home page</a>
+    <a href="{%url 'viewstudymaterialstundent'%}">your Study Material</a>
+    <a href="{%url 'viewnews'%}">Notice</a>
+    <a href="{%url 'postquestion'%}">Ask Question</a>
+    <a href="{%url 'changestupass'%}">Change Password</a>
+    <a href="{%url 'feedback'%}">Responce</a>
+    
+    <h3>{% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}</h3>
+    
+
+
+
+
+    {%block body%}
+    {%endblock%}
+</body>
+</html>

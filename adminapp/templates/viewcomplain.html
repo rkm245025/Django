@@ -1,0 +1,32 @@
+{%extends 'adminparent.html'%}
+{%block main%}
+<h1 style="text-align: center;">Student Complain's</h1>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Year</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Complain</th>
+        <th>Posted Date</th>
+
+    </tr>
+    {%for c in comp%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{c.username}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.branch}}</td>
+        <td>{{c.year}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.subject}}</td>
+        <td>{{c.responcetext}}</td>
+        <td>{{c.responcedate}}</td>
+        {%endfor%}
+    </tr>
+</table>
+
+{%endblock%}

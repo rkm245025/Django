@@ -1,0 +1,35 @@
+{%extends 'adminparent.html'%}
+{%block main%}
+<h1 style="text-align: center;">All Registered Students</h1>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Username</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Father Name</th>
+        <th>Branch</th>
+        <th>Year</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>AAdhar Number</th>
+
+    </tr>
+    {%for s in stu%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{s.username}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.dob}}</td>
+        <td>{{s.gender}}</td>
+        <td>{{s.fname}}</td>
+        <td>{{s.branch}}</td>
+        <td>{{s.year}}</td>
+        <td>{{s.address}}</td>
+        <td>{{s.email}}</td>
+        <td>{{s.aadhar}}</td>
+        {%endfor%}
+    </tr>
+</table>
+{%endblock%}

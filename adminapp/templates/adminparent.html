@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% if messages %}  
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{ message }}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+  {% endif %}
+
+    <a href="{%url 'adminlogout'%}">Logout</a>
+    <a href="{%url 'viewenquiry'%}">viewenquiry</Video></a>
+    <a href="{%url 'adminhome'%}">Home</a>
+    <a href="{%url 'viewstudent'%}">Viewstudnet</a>
+    <a href="{%url 'move'%}">Upload Study Materais</a>
+
+    <a href="{%url 'viewstudy'%}">View uploades study material</a>
+    <a href="{%url 'changeadminpassword'%}">change Password</a>
+    <a href="{%url 'news'%}">Upload News</a>
+    <a href="{%url 'viewcomplain'%}">Viewcomplain</a>
+    <a href="{%url 'viewfeedback'%}">View Feedback</a>
+    {% block main%}
+    {%endblock%}
+</body>
+</html>

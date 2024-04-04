@@ -1,0 +1,25 @@
+{% extends "father.html" %}
+{% block body %}
+    
+        
+            <h1>View Answer</h1>
+            <table>
+                <tr>
+                    <th>A#</th>
+                    <th>Answer</th>
+                    <th>Answered By</th>
+                    <th>Posted date</th>
+
+                </tr>
+                {% for a in ans%}
+                <tr>
+                <td>{{a.aid}}</td>
+                <td>{{a.answer}}</td>
+                <td>{{a.answerby}}</td>
+                <td>{{a.postedate}}</td>
+                
+                {% endfor %}</tr>
+            </table>        
+        
+    
+{% endblock body %}

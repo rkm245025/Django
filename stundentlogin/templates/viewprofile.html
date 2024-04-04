@@ -1,0 +1,57 @@
+{%extends 'father.html'%}
+
+
+{%block body%}
+
+
+
+    <h1 style="text-align: center;"> {{stu.name}}</h1>
+    <div style="text-align: center;"><table style="border: 1px;align-content: center; text-align: left;">
+        <tr>
+            <td>username :</td>
+            <td>{{stu.username}}</td>
+        </tr>
+        <tr>
+            <td>Father Name</td>
+            <td>{{stu.fname}}</td>
+
+        </tr>
+        <tr>
+            <td>Dob</td>
+            <td>{{stu.dob}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{stu.gender}}</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>{{stu.branch}}</td>
+        </tr>
+        <tr>
+            <td>Year</td>
+            <td>{{stu.year}}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>{{stu.address}}</td>
+        </tr>
+        <tr>
+            <td>Aadhar</td>
+            <td>{{stu.aadhar}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{stu.email}}</td>
+        </tr>
+        <tr>
+            <td>Registration Date</td>
+            <td>{{stu.regdate}}</td>
+
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>{{log.password}}</td>
+        </tr>
+    </table></div>
+    {%endblock%}
